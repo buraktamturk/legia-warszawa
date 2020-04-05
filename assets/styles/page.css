@@ -1,0 +1,126 @@
+
+@import url('~tingle.js/dist/tingle.css');
+@import url('~cropperjs/dist/cropper.css');
+
+@import url('~bootstrap/dist/css/bootstrap.css');
+@import url('~sweetalert2/dist/sweetalert2.css');
+@import url('~angular-loading-bar/build/loading-bar.min.css');
+@import url('~font-awesome/css/font-awesome.min.css');
+
+.tingle-modal {
+  z-index: 10000;
+}
+
+.tingle-modal-box__footer {
+  text-align: center;
+}
+
+body {
+  background: #afb1b3;
+  background-size: 120px;
+  color: #cc2229;
+}
+
+.header {
+  background: #afb1b3;
+}
+
+.header img {
+  width: 100%;
+  padding: 20px;
+}
+
+.content, .home-page {
+  box-sizing: content-box;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content > * {
+  box-sizing: content-box;
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.content-container, .home-page {
+  height:100vh;
+  height: -moz-available;
+  height: -webkit-fill-available;
+  height: fill-available;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+img.logo {
+  width: 230px;
+  margin: 0 auto 40px auto;
+}
+h3, .h3 {
+  font-size: 1.55rem;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+p {
+  font-size: 24px;
+}
+
+.home-page {
+  color: white;
+  background-color: #afb1b3;
+  background-size: 120px;
+  flex-grow: 1;
+  justify-content: space-around !important;
+  padding: 20px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #cc2229;
+  border-color: #cc2229;
+}
+
+.btn-primary.disabled {
+  color: #fff;
+  background-color: gray;
+  border-color: gray;
+}
+
+.images a {
+  display: block;
+  transform: scale(1.1,1.0);
+  transition: all .2s;
+}
+
+.images a.selected {
+  background: #FFF8C6;
+}
+
+.images a.selected img {
+  transform: scale(.8,.8);
+  transition: all .2s;
+}
+
+.images img {
+  width: 75%;
+  max-height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.text img {
+  width: 100%;
+  padding: 20%;
+}
+
+.form-group label {
+  font-weight: bold;
+}

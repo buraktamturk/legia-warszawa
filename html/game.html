@@ -1,0 +1,31 @@
+<form ng-if="ctrl.step == 1" ng-submit="ctrl.step = 2">
+  <div style="margin-bottom: 100px">
+    <div class="form-group">
+      <label for="name">Name Surname</label>
+      <input type="text" class="form-control" id="name" ng-model="ctrl.model.name" placeholder="" required>
+    </div>
+    <div class="form-group">
+      <label for="email">E-Mail</label>
+      <input type="email" class="form-control" id="email" ng-model="ctrl.model.email" placeholder="" required>
+    </div>
+    <button class="btn btn-block btn-primary">Next</button>
+  </div>
+</form>
+<div ng-if="ctrl.step == 2">
+  <p>Add a photo.</p>
+  <div ng-if="ctrl.model.selfie.$state === 1">
+    <a href class="btn btn-primary" ng-click="ctrl.uploadFile('selfie')"><i class="fa fa-camera-retro" aria-hidden="true"></i> Add Photo</a>
+  </div>
+  <div ng-if="ctrl.model.selfie.$state !== 1">
+    <img-picker width="1000" height="450" mode="resize" type="jpg" ng-model="ctrl.model.selfie"></img-picker>
+  </div>
+  <a class="btn btn-block btn-primary" href ng-class="{disabled:ctrl.model.selfie.$state !== 3}" ng-click="ctrl.submit()">Finalize!</a>
+</div>
+<div ng-if="ctrl.step == 3">
+  <div>
+    <h1>Congratulations!</h1>
+    <p>You have completed the process!</p>
+    <p>The video that is customized for you will arrive in your inbox in a few moments!</p>
+  </div>
+  <button class="btn btn-block btn-primary" ng-click="ctrl.reset()">Make a new video!</button>
+</div>
